@@ -10,9 +10,6 @@ override.tf.json
 .terraform/
 .terraform.lock.hcl
 
-# Local environment files
-*.tfvars
-*.tfvars.json
 
 # IDE / editor configs
 .vscode/
