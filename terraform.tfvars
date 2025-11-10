@@ -10,14 +10,14 @@ private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
 availability_zones = ["us-east-2a", "us-east-2b"]
 
 ami_id        = "ami-0f5fcdfbd140e4ab7"
-instance_type = "t2.micro"
+instance_type = "t3.medium"
 key_name      = "KD_test"
 
 #RDS
 db_name             = "newDB"
 db_username         = "test"
 db_password         = "ft!&gft234HCVgfs"
-db_instance_class   = "db.t3.micro"
+db_instance_class   = "db.t3.small"
 db_allocated_storage = 20
 db_engine_version   = "16.9"
 
