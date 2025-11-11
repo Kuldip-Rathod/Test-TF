@@ -31,4 +31,14 @@ ecr_repo_name = "privaterepo"
 apigw_name       = "test-api"
 apigw_stage_name = "v1"
 
+# ECS + ALB config
+service_name      = "api"
+container_name    = "api"
+container_port    = 8000
+desired_count     = 1
+task_cpu          = 512
+task_memory       = 1024
+health_check_path = "/health"
 
+ecr_repo_url = "414819400975.dkr.ecr.us-east-2.amazonaws.com/test-dev-ecr-privaterepo"
+image_tag    = "latest"
