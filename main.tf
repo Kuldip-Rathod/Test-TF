@@ -43,12 +43,12 @@ module "network" {
 #   s3_bucket_name = var.s3_bucket_name
 # }
 
-module "registry" {
-  source        = "./modules/registry"
-  project       = var.project
-  environment   = var.environment
-  ecr_repo_name = var.ecr_repo_name
-}
+# module "registry" {
+#   source        = "./modules/registry"
+#   project       = var.project
+#   environment   = var.environment
+#   ecr_repo_name = var.ecr_repo_name
+# }
 
 # module "gateway" {
 #   source          = "./modules/gateway"
@@ -58,23 +58,23 @@ module "registry" {
 #   apigw_stage_name = var.apigw_stage_name
 # }
 
-module "elastic_container" {
-  source            = "./modules/elastic-container"
+# module "elastic_container" {
+#   source            = "./modules/elastic-container"
 
-  project           = var.project
-  environment       = var.environment
-  service_name      = var.service_name
+#   project           = var.project
+#   environment       = var.environment
+#   service_name      = var.service_name
 
-  container_name    = var.container_name
-  container_port    = var.container_port
-  desired_count     = var.desired_count
-  task_cpu          = var.task_cpu
-  task_memory       = var.task_memory
-  health_check_path = var.health_check_path
+#   container_name    = var.container_name
+#   container_port    = var.container_port
+#   desired_count     = var.desired_count
+#   task_cpu          = var.task_cpu
+#   task_memory       = var.task_memory
+#   health_check_path = var.health_check_path
 
-  ecr_repo_url      = var.ecr_repo_url
-  image_tag         = var.image_tag
+#   ecr_repo_url      = var.ecr_repo_url
+#   image_tag         = var.image_tag
 
-  vpc_id            = module.network.vpc_id
-  public_subnet_ids = module.network.public_subnet_ids
-}
+#   vpc_id            = module.network.vpc_id
+#   public_subnet_ids = module.network.public_subnet_ids
+# }
